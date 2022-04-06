@@ -22,13 +22,31 @@
         }
         .photo-frame:hover .photo{
           transform: scale(1.2);
-          transition: transform 2s ease-in-out;
+          transition: transform 2s ease-in;
         }
         
         .photo-frame:hover .photo-detail{
             display: block;
             background-color: rgba(128, 128, 128, 0.424);
+            transition: transform 2s ease-in;
+           transform: scale(1);
+           animation-duration: 3s;
+           
+            
+
         }
+        /* animation */
+        .photo-detail{
+            animation-timing-function: linear;
+            position: relative;
+            animation: mymove .5s ;
+        }
+
+        @keyframes mymove {
+  from {left: -40px;}
+  to {left: 0px;}
+}
+
         .photo,img{
             width: 100%;
             border-radius: 10px;  
@@ -40,6 +58,7 @@
             width: 300px;
            top: 0px;
            text-align: center;
+           
         }
         .photo-detail h3{
             background-color: rgba(119, 136, 153, 0.63);
